@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.inc.mapping">
+	<class name="Employee" table="employee">
+		<id name="id" column="emp_id" type="integer">
+			<generator class="native" />
+		</id>
+		<property name="firstName" column="FirstName" type="string" />
+		<property name="lastName" column="LastName" type="string" />
+		<property name="roleId" column="roleId" type="integer" />
+		<property name="emailId" column="emailId" type="string" />
+		<property name="password" column="password" type="string" />
+	</class>
+	<query name="loginValidation">
+	    <![CDATA[from Employee where emailId=:emailId and password=:password]]>
+	</query>
+</hibernate-mapping>
