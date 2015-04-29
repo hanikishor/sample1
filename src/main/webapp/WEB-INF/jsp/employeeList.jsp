@@ -7,7 +7,7 @@
 <title>:: Employee details ::</title>
 <BODY>
 	<div>
-		Welcome ${userName }..!!
+		Welcome ${userName }..!! <a href="login.go">Go Back</a>
 		<center>
 			<table border="1" width="30%" cellpadding="5">
 				<thead>
